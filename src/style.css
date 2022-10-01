@@ -3,18 +3,17 @@ ul {
 }
 
 .container {
-    background: rgb(255, 216, 216);
+    background: rgb(243, 243, 243);
     max-width: 600px;  
     padding: 30px;
     margin-top: 30px;
     border-radius: 8px;
+    border: 1px solid #a5a5a5
 }
 .inputPlace {
     max-width: 550px;
 }
-button {
-    display: ;
-}
+
 .notes {
     font-size: 10px;
     text-align: center;
@@ -39,4 +38,10 @@ button {
 }
 hr {
     margin-bottom: 10px;
+}
+.inputPlace {
+    text-align:center;
+}
+.btn btn-primary {
+    background:rgb(107, 107, 107);
 }
