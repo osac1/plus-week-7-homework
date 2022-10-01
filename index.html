@@ -10,8 +10,14 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-sm">
+        <div class="form">
+            <div class="inputPlace">
+            <label for="cityInput">Search a city</label>
+            <input type="text" placeholder="Enter a city" id="cityInput">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="row">
+            <div class="col-sm" id="pic-desc">
                 🌤️ <span>Clear</span>
             </div>
             <div class="col-sm">
@@ -19,15 +25,15 @@
             </div>
             <div class="col-sm">
                 <ul>
-                    <li>23°C</li>
-                    <li>Celsius / Fahrenheit</li>
+                    <li class="temp">23°C</li>
+                    <li class="conversion">Celsius / Fahrenheit</li>
                 </ul>
             </div>
         </div>
         <hr>
         <div class="row">
             <div class="col-sm">
-                <ul>
+                <ul class="basicD">
                     <li>high</li>
                     <li>wind</li>
                     <li>pressure</li>
@@ -37,12 +43,13 @@
                 
             </div>
             <div class="col-sm">
-                <ul>
+                <ul class="basicD">
                     <li>city</li>
                     <li>day</li>
                     <li>time</li>
                 </ul>
             </div>
+        </div>
         </div>
     </div>
     <div class="notes">

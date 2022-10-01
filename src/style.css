@@ -1,0 +1,42 @@
+ul {
+    list-style: none;
+}
+
+.container {
+    background: rgb(255, 216, 216);
+    max-width: 600px;  
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+.inputPlace {
+    max-width: 550px;
+}
+button {
+    display: ;
+}
+.notes {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+.basicD {
+    font-size: 14px;
+}
+#pic-desc {
+    font-size: 60px;
+}
+#pic-desc span {
+    font-size: 16px;
+    font-style: italic;
+    margin: 0;
+}
+.conversion {
+    font-size: 12px;
+}
+.temp {
+    font-size: 60px;
+}
+hr {
+    margin-bottom: 10px;
+}
