@@ -17,6 +17,8 @@ function giveDate(timeNow) {
 
 
 function showData(response) {
+    let celsius = response.data.main.temp;
+
     let newDegrees = document.querySelector(".mainTemp");
     let newTime = document.querySelector("#time-now");
     let newHumidity = document.querySelector("#hum-now");
@@ -25,7 +27,7 @@ function showData(response) {
     let newDesc = document.querySelector("#desc-now");
     let newIcon = document.querySelector("#pic-icon")
 
-    let celsius = response.data.main.temp;
+    
 
     newDegrees.innerHTML = `${Math.round(celsius)}°C`;
     newTime.innerHTML = giveDate(response.data.dt * 1000);
@@ -34,8 +36,6 @@ function showData(response) {
     newPressure.innerHTML = `Pressure: ${response.data.main.pressure} Pa`;
     newDesc.innerHTML = response.data.weather[0].description;
     newIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-
-    
   }
 
   
@@ -45,12 +45,7 @@ function citySearch(event){
     event.preventDefault();
     let newCity = document.querySelector("#city-input");
     let changedCity = document.querySelector("#city-now");
-
-  if (newCity.value) {
     changedCity.innerHTML = newCity.value;
-  } else {
-    changedCity.innerHTML = "Search a city";
-  }
 
     let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${newCity.value}&appid=${apiKey}&units=metric`;
@@ -77,11 +72,11 @@ function convertToCelsius(event) {
 
 let celsius = null;
 
+let inputCity = document.querySelector("#enter-city");
+inputCity.addEventListener("submit", citySearch);
+
 let celsiusConverter = document.querySelector("#to-celsius");
 celsiusConverter.addEventListener("click", convertToCelsius);
 
 let fahrConverter = document.querySelector("#to-fahrenheit");
 fahrConverter.addEventListener("click", convertToFahr);
-
-let inputCity = document.querySelector("#enter-city");
-inputCity.addEventListener("submit", citySearch);
