@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="src/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -13,22 +14,29 @@
         <div class="form">
             <div class="inputPlace">
                 <div>
-            <label for="cityInput">Search a city</label>
+            <label for="cityInput" >Search a city</label>
             </div>
-            <input type="text" placeholder="Enter a city" id="cityInput">
+            <form id="enter-city">
+            <input type="text" placeholder="Enter a city" id="city-input">
             <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
             </div>
             <div class="row">
-            <div class="col-sm" id="pic-desc">
-                🌤️ <span>Clear</span>
+            <div class="col-sm" >
+                <img src="https://cdn-icons-png.flaticon.com/512/979/979585.png" 
+                alt="Clear"
+                id="pic-icon"
+                class="float-left">
+                <div id="desc-now">Clear</div>
             </div>
+            
             <div class="col-sm">
                 
             </div>
             <div class="col-sm">
                 <ul>
-                    <li class="temp">23°C</li>
-                    <li class="conversion">Celsius / Fahrenheit</li>
+                    <li class="mainTemp">23°C</li>
+                    <li class="conversion"> <a href="" id="to-celsius" class="active">Celsius</a>  / <a href="" id="to-fahrenheit">Fahrenheit</a></li>
                 </ul>
             </div>
         </div>
@@ -36,9 +44,9 @@
         <div class="row">
             <div class="col-sm">
                 <ul class="basicD">
-                    <li>high</li>
-                    <li>wind</li>
-                    <li>pressure</li>
+                    <li id="hum-now">high</li>
+                    <li id="wind-now">wind</li>
+                    <li id="pressure-now">pressure</li>
                 </ul>
             </div>
             <div class="col-sm">
@@ -46,9 +54,8 @@
             </div>
             <div class="col-sm">
                 <ul class="basicD">
-                    <li>city</li>
-                    <li>day</li>
-                    <li>time</li>
+                    <li id="city-now">city</li>
+                    <li id="time-now">time</li>
                 </ul>
             </div>
         </div>
