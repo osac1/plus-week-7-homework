@@ -17,7 +17,7 @@ function giveDate(timeNow) {
 
 
 function showData(response) {
-    let celsius = response.data.main.temp;
+    celsius = response.data.main.temp;
 
     let newDegrees = document.querySelector(".mainTemp");
     let newTime = document.querySelector("#time-now");
