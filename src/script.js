@@ -15,6 +15,30 @@ function giveDate(timeNow) {
       return `${day} ${hour}:${minute}`;
 }
 
+function showForecast() {
+  let forecast = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let forecastDays = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"]
+  forecastDays.forEach(function (forecastDays) {
+  forecastHTML = forecastHTML +  `
+  <div class="col-2">
+      <div class="forecast-date">
+          ${forecastDays} 
+      </div>
+      <div class="forecast-icon">
+          😊
+      </div>
+      <div  class="forecast-temp">
+          <span class="forecast-min">3</span> <span class="forecast-max">16</span>
+      </div>
+  </div>
+`
+  });
+forecastHTML = forecastHTML + `</div>`;
+forecast.innerHTML = forecastHTML;
+}
+
 
 function showData(response) {
     celsius = response.data.main.temp;
@@ -71,6 +95,8 @@ function convertToCelsius(event) {
 }
 
 let celsius = null;
+
+showForecast()
 
 let inputCity = document.querySelector("#enter-city");
 inputCity.addEventListener("submit", citySearch);
