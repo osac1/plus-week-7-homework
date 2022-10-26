@@ -63,6 +63,6 @@ hr {
 #forecast {
     text-align: center;
 }
-.forecast-icon {
-    font-size: 25px;
+.forecast-date {
+    font-size: 16px;
 }
