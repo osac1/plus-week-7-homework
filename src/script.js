@@ -106,30 +106,8 @@ function citySearch(event){
     axios.get(apiUrl).then(showData);
 }
 
-function convertToFahr(event) {
-    event.preventDefault();
-    let tempCel = document.querySelector(".mainTemp");
-    let fahr = (celsius * 9) / 5 + 32;
-    tempCel.innerHTML = `${Math.round(fahr)}°F`;
-    celsiusConverter.classList.remove("active");
-    fahrConverter.classList.add("active");
-  }
-
-function convertToCelsius(event) {
-    event.preventDefault();
-    let backToCelsius = document.querySelector(".mainTemp");
-    backToCelsius.innerHTML = `${Math.round(celsius)}°C`;
-    fahrConverter.classList.remove("active");
-    celsiusConverter.classList.add("active");
-}
 
 let celsius = null;
 
 let inputCity = document.querySelector("#enter-city");
 inputCity.addEventListener("submit", citySearch);
-
-let celsiusConverter = document.querySelector("#to-celsius");
-celsiusConverter.addEventListener("click", convertToCelsius);
-
-let fahrConverter = document.querySelector("#to-fahrenheit");
-fahrConverter.addEventListener("click", convertToFahr);
